@@ -1,3 +1,5 @@
+2b8c68e Task 2.2
+0f60d20 Task 2.1
 abf28f1 Task 1.2
 a76893e Task 1.1 6
 370ede6 Task 1.1 5
