@@ -1,14 +1,14 @@
 package theater;
 
 /**
- * Class representing a performance of a play..
+ * Represents a performance of a play.
  */
 public final class Performance {
 
-    /** The ID of the play being performed */
+    /** The ID of the play being performed. */
     private final String playID;
 
-    /** The number of audiences attending the play*/
+    /** The number of audiences attending the play. */
     private final int audience;
 
     /**
@@ -22,7 +22,7 @@ public final class Performance {
     }
 
     /**
-     * Returns the play ID for the performance
+     * Returns the play ID for the performance.
      * @return the ID of the play
      */
     public String getPlayID() {
@@ -30,7 +30,7 @@ public final class Performance {
     }
 
     /**
-     * Returns the audience size of the play
+     * Returns the audience size of the play.
      * @return the number of audiences attending the play
      */
     public int getAudience() {

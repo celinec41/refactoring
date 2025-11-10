@@ -8,15 +8,15 @@ import java.util.List;
  */
 public final class Invoice {
 
-    /** The name of the customer for the invoice*/
+    /** The name of the customer for the invoice. */
     private final String customer;
-    /** The list of performances in the invoice*/
+    /** The list of performances in the invoice. */
     private final List<Performance> performances;
 
     /**
-     * Creates the invoice list given the customer and performances
+     * Creates the invoice list given the customer and performances.
      * @param customer the name of the customer for the invoice
-     * @param performances the list of the performances for specifies customer
+     * @param performances the list of the performances for specified customer
      */
     public Invoice(String customer, List<Performance> performances) {
         this.customer = customer;
@@ -24,7 +24,7 @@ public final class Invoice {
     }
 
     /**
-     * Returns the names of the customer
+     * Returns the names of the customer.
      * @return the customer name
      */
     public String getCustomer() {
@@ -32,7 +32,7 @@ public final class Invoice {
     }
 
     /**
-     * Returns the list of performances
+     * Returns the list of performances.
      * @return the list of performances
      */
     public List<Performance> getPerformances() {

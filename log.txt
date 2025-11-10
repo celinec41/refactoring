@@ -1,6 +1,0 @@
-d505a1c Task 1.1 3
-6e98b05 Task 1.1 2
-27ed735 Task 1.2
-226daeb Task 1.1 CheckStyle 1
-0a86667 Task 1.1 CheckStyle 1
-d198a11 Initial commit

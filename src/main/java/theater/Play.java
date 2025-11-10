@@ -5,13 +5,13 @@ package theater;
  */
 public final class Play {
 
-    /** The name of the play */
+    /** The name of the play. */
     public final String name;
-    /** The type of the play*/
+    /** The type of the play. */
     public final String type;
 
     /**
-     * Constructs the Play with specified name and type
+     * Constructs the Play with specified name and type.
      * @param name the name of the play
      * @param type the type of the play
      */
@@ -21,7 +21,7 @@ public final class Play {
     }
 
     /**
-     * Returns the name of the play
+     * Returns the name of the play.
      * @return the name of the play
      */
     public String getName() {
@@ -29,7 +29,7 @@ public final class Play {
     }
 
     /**
-     * Returns the type of the play
+     * Returns the type of the play.
      * @return the type of the play
      */
     public String getType() {
