@@ -32,7 +32,7 @@ public final class Constants {
     public static final int PASTORAL_VOLUME_CREDIT_THRESHOLD = 20;
 
     /**
-     *
+     * Prevent Instantiation
      */
     private Constants() {
     }

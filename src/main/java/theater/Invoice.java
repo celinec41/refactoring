@@ -25,7 +25,6 @@ public final class Invoice {
      * @return the customer name
      */
     public String getCustomer() {
-
         return customer;
     }
 
@@ -33,7 +32,6 @@ public final class Invoice {
      * @return the list of performances
      */
     public List<Performance> getPerformances() {
-
         return performances;
     }
 }
