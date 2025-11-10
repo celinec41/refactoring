@@ -6,9 +6,9 @@ package theater;
 public final class Play {
 
     /** The name of the play. */
-    public final String name;
+    private final String name;
     /** The type of the play. */
-    public final String type;
+    private final String type;
 
     /**
      * Constructs the Play with specified name and type.
