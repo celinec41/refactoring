@@ -37,7 +37,7 @@ public final class StatementPrinter {
         for (final Performance p : invoice.getPerformances()) {
             final Play play = plays.get(p.getPlayID());
 
-            int thisAmount = 0;
+            int thisAmount;
             switch (play.getType()) {
                 case "tragedy":
                     thisAmount = Constants.TRAGEDY_BASE_AMOUNT;
