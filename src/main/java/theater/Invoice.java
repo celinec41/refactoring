@@ -2,24 +2,38 @@ package theater;
 
 import java.util.List;
 
-/**
+/** Represent a customer's invoice containing a list of performances attended.
  * Class representing an invoice for a customer.
  */
-public class Invoice {
+public final class Invoice {
 
-    private final String customer;
-    private final List<Performance> performances;
+    /** The name of the customer for the invoice*/
+    public final String customer;
+    /** The list of performances in the invoice*/
+    public final List<Performance> performances;
 
+    /** Creates the invoice list given the customer and performances
+     * @param customer the name of the customer for the invoice
+     * @param performances the list of the performances for specifies customer
+     */
     public Invoice(String customer, List<Performance> performances) {
         this.customer = customer;
         this.performances = performances;
     }
 
-    public final String getCustomer() {
+    /** Returns the names of the customer
+     * @return the customer name
+     */
+    public String getCustomer() {
+
         return customer;
     }
 
-    public final List<Performance> getPerformances() {
+    /** Returns the list of performances
+     * @return the list of performances
+     */
+    public List<Performance> getPerformances() {
+
         return performances;
     }
 }

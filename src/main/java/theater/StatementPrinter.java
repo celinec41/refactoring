@@ -7,10 +7,14 @@ import java.util.Map;
 /**
  * This class generates a statement for a given invoice of performances.
  */
-public class StatementPrinter {
-    public Invoice invoice;
-    public Map<String, Play> plays;
+public final class StatementPrinter {
+    private final Invoice invoice;
+    private final Map<String, Play> plays;
 
+    /** Constructs a StatementPrinter with specified invoice and map
+     * @param invoice the invoice to print
+     * @param plays a map from play ID to
+     */
     public StatementPrinter(Invoice invoice, Map<String, Play> plays) {
         this.invoice = invoice;
         this.plays = plays;
