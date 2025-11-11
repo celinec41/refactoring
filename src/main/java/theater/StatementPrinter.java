@@ -74,14 +74,14 @@ public final class StatementPrinter {
         return totalAmount;
     }
 
-    private int getVolumeCredits(Performance performance, int vcredits) {
-        vcredits += Math.max(
+    private int getVolumeCredits(Performance performance, int results) {
+        results += Math.max(
                 performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
         // add extra credit for every five comedy attendees
         if ("comedy".equals(getPlay(performance).getType())) {
-            vcredits += performance.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
+            results += performance.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
         }
-        return vcredits;
+        return results;
     }
 
     private Play getPlay(Performance performance) {
@@ -94,9 +94,8 @@ public final class StatementPrinter {
      * @param performance the performance to charge for
      * @return the amounts need to be charged for the performance
      */
-    private  int getAmount(Performance performance) {
-        final int thisAmount = getThisAmount(performance, getPlay(performance));
-        return thisAmount;
+    private int getAmount(Performance performance) {
+        return getThisAmount(performance, getPlay(performance));
     }
 
     private int getThisAmount(Performance performance, Play play) {
