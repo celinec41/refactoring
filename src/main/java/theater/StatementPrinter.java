@@ -75,12 +75,13 @@ public final class StatementPrinter {
     }
 
     private int getVolumeCredits(Performance performance, int credits) {
-        credits += Math.max(
+        int totalCredits = credits;
+        totalCredits += Math.max(
                 performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
         if ("comedy".equals(getPlay(performance).getType())) {
-            credits += performance.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
+            totalCredits += performance.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
         }
-        return credits;
+        return totalCredits;
     }
 
     private Play getPlay(Performance performance) {
