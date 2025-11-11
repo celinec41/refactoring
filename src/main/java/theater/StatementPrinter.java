@@ -14,7 +14,7 @@ public final class StatementPrinter {
     /**
      * Constructs a StatementPrinter with specified invoice and map.
      * @param invoice the invoice to print
-     * @param plays a map from play ID to
+     * @param plays a map from play ID to Play
      */
     public StatementPrinter(Invoice invoice, Map<String, Play> plays) {
         this.invoice = invoice;
@@ -34,13 +34,11 @@ public final class StatementPrinter {
         final int totalAmount = getTotalAmount();
         final int volumeCredits = getTotalVolumeCredits();
         for (final Performance performance : invoice.getPerformances()) {
-
-
             // print line for this order
             result.append(String.format(
                     "  %s: %s (%s seats)%n",
                     getPlay(performance).getName(),
-                    getFormat(performance),
+                    usd(getAmount(performance)),
                     performance.getAudience()));
         }
         result.append(String.format(
@@ -77,10 +75,8 @@ public final class StatementPrinter {
     }
 
     private int getVolumeCredits(Performance performance, int results) {
-
         results += Math.max(
-                performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0
-        );
+                performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
         // add extra credit for every five comedy attendees
         if ("comedy".equals(getPlay(performance).getType())) {
             results += performance.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
@@ -99,11 +95,11 @@ public final class StatementPrinter {
      * @return the amounts need to be charged for the performance
      */
     private  int getAmount(Performance performance) {
-        int thisAmount = getThisAmount(performance, getPlay(performance));
+        final int thisAmount = getThisAmount(performance, getPlay(performance));
         return thisAmount;
     }
 
-    private  int getThisAmount(Performance performance, Play play) {
+    private int getThisAmount(Performance performance, Play play) {
         int result;
         switch (getPlay(performance).getType()) {
             case "tragedy":
